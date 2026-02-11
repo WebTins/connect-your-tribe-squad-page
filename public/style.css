@@ -22,3 +22,8 @@ header {
 
 main {
     background-image: url(/sand.jpg);
+    .figure-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;

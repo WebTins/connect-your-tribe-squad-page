@@ -1,5 +1,6 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
+<main>
   <ul class="figure-list">
     {% for person in persons %}
         <figure>
@@ -12,5 +13,6 @@
         </figure>
     {% endfor %}
   </ul>
+</main>
 
 {% render 'partials/foot.liquid', squads: squads %}

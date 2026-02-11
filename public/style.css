@@ -37,3 +37,19 @@ main {
             width: 290px;
             height: 300px;
 
+            div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid white;
+

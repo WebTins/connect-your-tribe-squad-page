@@ -1,6 +1,16 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
 <main>
+  <form action="/">
+   <label for="squad">Filter op squad:</label>
+    <select id="squad" name="squad">
+      <option value="">Alle squads</option>
+      <option value="1I">1I</option>
+      <option value="1J">1J</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+
   <ul class="figure-list">
     {% for person in persons %}
         <figure>

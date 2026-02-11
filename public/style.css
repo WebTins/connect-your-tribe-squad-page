@@ -19,3 +19,6 @@ header {
     text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;;
     font-size: 1.25em;
 }
+
+main {
+    background-image: url(/sand.jpg);

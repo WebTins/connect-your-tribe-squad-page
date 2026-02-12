@@ -20,7 +20,7 @@
     </li>
   </ul>
 
-  <ul class="figure-list">
+  <div class="figure-list">
     {% for person in persons %}
         <figure>
           <a class="id">{{ person.id }}</a>
@@ -37,7 +37,7 @@
           <a class="birthdate">{{ person.birthdate | date_to_long_string  }}</a>
         </figure>
     {% endfor %}
-  </ul>
+  </div>
 </main>
 
 {% render 'partials/foot.liquid', squads: squads %}

@@ -16,8 +16,8 @@
     --border-radius-circle: 50%;
 
     --text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;;
-
 }
+
 @font-face {
     font-family: Merienda;
     src: url(/MeriendaOne-Regular.woff);
@@ -36,6 +36,31 @@ header {
 
 main {
     background-image: url(/sand.jpg);
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: var(--gap-medium);
+        padding: 0;
+        flex-wrap: wrap;
+
+        li {
+            list-style-type: none;
+            margin-top: 1.5rem;
+            
+            a {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 30px;
+                text-decoration: none;
+                color: var(--accent-dark);
+                background-color: var(--accent-light);
+                border-radius: var(--border-radius-button);
+            }
+        }
+    }
 
     form {
         display: flex;

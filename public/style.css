@@ -4,6 +4,20 @@
     font-family: Merienda;
 }
 
+:root {
+    --background-header: hsl(197, 76%, 48%);
+    --accent-light: hsl(0, 0%, 100%);
+    --accent-dark: hsl(0, 0%, 0%);
+
+    --gap-small: 1rem;
+    --gap-medium: 1.5rem;
+
+    --border-radius-button: 50px;
+    --border-radius-circle: 50%;
+
+    --text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;;
+
+}
 @font-face {
     font-family: Merienda;
     src: url(/MeriendaOne-Regular.woff);
@@ -14,9 +28,9 @@ header {
     justify-content: center;
     align-items: center;
     height: 5rem;
-    background-color: #1da2d8;
-    color: white;
-    text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;;
+    background-color: var(--background-header);
+    color: var(--accent-light);
+    text-shadow: var(--text-shadow);
     font-size: 1.25em;
 }
 
@@ -27,7 +41,7 @@ main {
         display: flex;
         justify-content: center;
         padding-top: 1rem;
-        gap: 1rem;
+        gap: var(--gap-small)
     }
 
     .figure-list {
@@ -38,7 +52,6 @@ main {
 
         figure {
             position: relative;
-
             background-image: url("/shell.png");
             background-repeat: no-repeat;
 
@@ -69,13 +82,13 @@ main {
 
                 width: 100px;
                 height: 100px;
-                border-radius: 50%;
+                border-radius: var(--border-radius-circle);
                 overflow: hidden;
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: solid white;
+                border: solid var(--accent-light);
 
                 .profile-link {
                     display: inline;

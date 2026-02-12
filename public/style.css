@@ -46,6 +46,21 @@ main {
             height: 300px;
             margin: 1.5rem 0 1.5rem 0;
 
+            .id {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .birthdate {
+                position: absolute;
+                width: max-content;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
             div {
                 position: absolute;
                 top: 50%;

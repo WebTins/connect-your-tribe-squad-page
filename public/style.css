@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: Merienda;
 }
 
 @font-face {
@@ -14,7 +15,6 @@ header {
     align-items: center;
     height: 5rem;
     background-color: #1da2d8;
-    font-family: Merienda;
     color: white;
     text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;;
     font-size: 1.25em;

@@ -66,6 +66,16 @@ app.get('/', async function (request, response) {
     // 'filter[squads][squad_id][name]': '1J',
     'filter[squads][squad_id][cohort]': '2526'
   }
+
+  // Filter eventueel alleen op een bepaalde squad
+  if (request.query.squad) {
+  params['filter[squads][squad_id][name]'] = request.query.squad
+}
+
+  if (request.query.sort == "oud") {
+  params['sort'] = "name";
+}
+
   const personResponse = await fetch('https://fdnd.directus.app/items/person/?' + new URLSearchParams(params))
 
   // En haal daarvan de JSON op

@@ -1,18 +1,24 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
 <main>
-  <form action="/">
-   <label for="squad">Filters:</label>
-    <select id="squad" name="squad">
-      <option value="">Alle squads</option>
-      <option value="1I">1I</option>
-      <option value="1J">1J</option>
-      <option value="a-z">A-Z</option>
-      <option value="oud">Oud</option>
-      <option value="jong">Jong</option>
-    </select>
-    <button type="submit">Filter</button>
-  </form>
+  {% comment %} Filters en Sorteer opties {% endcomment %}
+  <ul class="filters">
+    <li>
+      <a href="/" class="filter-link">Alle squads</a>
+    </li>
+    <li>
+      <a href="/squad-1i" class="filter-link">Squad 1I</a>
+    </li>
+    <li>
+      <a href="/squad-1j" class="filter-link">Squad 1J</a>
+    </li>
+    <li>
+      <a href="/az" class="filter-link">A–Z</a>
+    </li>
+    <li>
+      <a href="/za" class="filter-link">Z–A</a>
+    </li>
+  </ul>
 
   <ul class="figure-list">
     {% for person in persons %}

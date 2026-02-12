@@ -14,12 +14,14 @@
   <ul class="figure-list">
     {% for person in persons %}
         <figure>
+          <a class="id">{{ person.id }}</a>
           <div>
             <a href="{{ person.profilecard }}" class="profile-link" >
               {% comment %} <a href="/student/{{ person.id }}" class="profile-link" > {% endcomment %}
               <img class="mugshots" src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=500" alt="Profiel foto">
             </a>
           </div>
+          <a class="birthdate">{{ person.birthdate | date_to_long_string  }}</a>
         </figure>
     {% endfor %}
   </ul>

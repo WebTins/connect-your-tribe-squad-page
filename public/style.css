@@ -160,4 +160,20 @@ main {
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
     }
+
+    .filters a {
+        transition: 0.2s ease;
+    }
+
+    .filters a:hover {
+        background-color: var(--background-header);
+        color: var(--accent-light);
+        text-shadow: var(--text-shadow);
+    }
+
+    .filters a:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px #000;
+        transform: scale(1.05);
+    }
 }

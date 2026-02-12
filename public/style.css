@@ -23,6 +23,20 @@
     src: url(/MeriendaOne-Regular.woff);
 }
 
+@keyframes --bounce {
+	0% {
+		translate: 0;
+	}
+	
+	50% {
+		translate: 0 -1em;
+	}
+	
+	100% {
+		translate: 0;
+	}
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -131,5 +145,12 @@ main {
                 }
             }
         }
+    }
+
+    figure div {
+        animation-name: --bounce;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
     }
 }

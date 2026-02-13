@@ -4,36 +4,49 @@
   {% comment %} Filters en Sorteer opties {% endcomment %}
   <ul class="filters">
     <li>
+      {% comment %} Filter naar alle squads {% endcomment %}
       <a href="/" class="filter-link">Alle squads</a>
     </li>
+    {% comment %} Filter naar Squad 1i {% endcomment %}
     <li>
       <a href="/squad-1i" class="filter-link">Squad 1I</a>
     </li>
+    {% comment %} Filter naar Squad 1j {% endcomment %}
     <li>
       <a href="/squad-1j" class="filter-link">Squad 1J</a>
     </li>
+    {% comment %} Filter naar jongste {% endcomment %}
     <li>
       <a href="/jong" class="filter-link">Jongste</a>
     </li>
+    {% comment %} Filter naar oudste {% endcomment %}
     <li>
       <a href="/oud" class="filter-link">Oudste</a>
     </li>
   </ul>
 
+  {% comment %} Wrapper van de figure {% endcomment %}
   <div class="figure-list">
     {% for person in persons %}
         <figure>
+          {% comment %} ID van persoon {% endcomment %}
           <a class="id">{{ person.id }}</a>
+          {% comment %} Schelp {% endcomment %}
           <div>
+            {% comment %} Link naar profilecard van persoon {% endcomment %}
             <a href="{{ person.profilecard }}" class="profile-link" >
               {% comment %} <a href="/student/{{ person.id }}" class="profile-link" > {% endcomment %}
+
+              {% comment %} Als persoon een mugshot heeft {% endcomment %}
               {% if person.mugshot %}
               <img class="mugshots" src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=500" alt="Profiel foto">
+              {% comment %} Als persoon geen mugshot heeft, vervang het met deze image {% endcomment %}
               {% else %}
               <img class="patrick" src="/patrick.png" width="50" alt="Patrick">
               {% endif %}
             </a>
           </div>
+          {% comment %} Geboortedatum persoon {% endcomment %}
           <a class="birthdate">{{ person.birthdate | date_to_long_string  }}</a>
         </figure>
     {% endfor %}
